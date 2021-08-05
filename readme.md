@@ -9,9 +9,9 @@ Then, when the user browses the HTML file, the embedded file is decrypted on the
 
 This tool comes in two flavors, providing the same overall functionnality but with some slight changes in the way of using it:
 
-  1. An **python script** which generates the output HTML file based on a template, using **RC4 encryption** routines, and embedding the decryption key within the output file. The resulting HTML can either be browsed by the targeted user or sent as an attachement.
+  1. A **python script** which generates the output HTML file based on a template, using **RC4 encryption** routines, and embedding the decryption key within the output file. The resulting HTML can either be browsed by the targeted user or sent as an attachement.
 
-  2. An **HTML/Javascript** that you can drag the file into be encrypted to, which generates the output HTML file, using the **WebCrypto API**, but NOT embedding the decryption material (*key and counter*). Instead, the decryption material is displayed as a set of URL parameters to be added into a URL pointing to the HTML resulting file: `http(s)://hosting.server.com/result.html#hexencodedkey!hexencodedcounter`. So the resulting HTML file cannot be sent as an attachment.
+  2. A **HTML/Javascript** that you can drag the file into be encrypted to, which generates the output HTML file, using the **WebCrypto API**, but NOT embedding the decryption material (*key and counter*). Instead, the decryption material is displayed as a set of URL parameters to be added into a URL pointing to the HTML resulting file: `http(s)://hosting.server.com/result.html#hexencodedkey!hexencodedcounter`. So the resulting HTML file cannot be sent as an attachment.
   The main advantage of this technique is that the decryption material is not embedded into the file itself, hence preventing analysis and even retrieval of the payload by any system which doesn't have the full URL (eg: intercepting proxy)
 
 Side notes:
